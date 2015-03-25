@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.netter.activitylifecycle.MainActivity" 
+    android:background="@drawable/app_background">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/sjsu_logo" />
+
+    <TextView
+        android:id="@+id/textViewHeadingB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="28dp"
+        android:layout_toRightOf="@+id/imageView1"
+        android:text="Activity A"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white" 
+        />
+
+    <Button
+        android:id="@+id/buttonStartB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="62dp"
+        android:background="#32CD32"
+        android:longClickable="true"
+        android:minHeight="35dip"
+        android:minWidth="100dip"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Start Activity B"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textViewThreadCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonStartB"
+        android:layout_below="@+id/buttonStartB"
+        android:layout_marginTop="74dp"
+        android:text="Thread Count: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white" 
+        android:editable="true"/>
+
+    <TextView
+        android:id="@+id/textViewCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewThreadCount"
+        android:layout_alignBottom="@+id/textViewThreadCount"
+        android:layout_toLeftOf="@+id/buttonDialog"
+        android:enabled="false"
+        android:shadowColor="@android:color/black"
+        android:text="0000"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white" 
+        android:editable="true"/>
+
+    <Button
+        android:id="@+id/buttonCloseApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="76dp"
+        android:background="@android:color/black"
+        android:minHeight="35dip"
+        android:text="Close App"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/textViewLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonCloseApp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="34dp"
+        android:text="___________________________________"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#32CD32" />
+
+    <Button
+        android:id="@+id/buttonDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonStartB"
+        android:layout_alignBottom="@+id/buttonStartB"
+        android:layout_toRightOf="@+id/buttonCloseApp"
+        android:background="#FFA500"
+        android:minHeight="35dip"
+        android:text="Dialog" />
+
+</RelativeLayout>
